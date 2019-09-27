@@ -1,3 +1,33 @@
+
+/* global  */
 body {
-  background-color: pink;
+  font-family: 'Architects Daughter', cursive;
+  background-color: #333;
+  color: #eee;
+  font-size: 20px;
+}
+
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover{
+  color: #333;
+}
+
+/* navbar  */
+nav{
+  font-weight: 700;
+  font-size: 30px;
+}
+.navbar{
+  background: #a4b0be;
+}
+
+/* images */
+img.profile{
+  max-width: 352px;
+  height: 550px;
 }

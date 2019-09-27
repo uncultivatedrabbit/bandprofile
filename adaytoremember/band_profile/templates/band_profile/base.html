@@ -7,33 +7,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap" rel="stylesheet">
     <link rel="stylesheet"  type="text/css" href="{% static 'css/style.css' %}">
+    <script src="https://kit.fontawesome.com/09e706ee12.js" crossorigin="anonymous"></script>
   </head>
   <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">
-            <img src="{% static 'images/adtr-logo.png' %}" width="150" height="auto" alt="">
+      <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="/">
+            <img src="{% static 'images/adtr-logo.png' %}" width="150" height="auto" alt="logo">
           </a>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">
                   Bios
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a href="#" class="dropdown-item">Jeremy McKinnon</a>
-                  <a href="#" class="dropdown-item">Neil Westfall</a>
-                  <a href="#" class="dropdown-item">Joshua Woodard</a>
-                  <a href="#" class="dropdown-item">Alex Shelnutt</a>
-                  <a href="#" class="dropdown-item">Kevin Skaff</a>
+                  {% for member in band_members %}
+                  <a href="#" class="dropdown-item">{{member.first}} {{member.last}}</a>
+                  {% endfor %}
                 </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Albums</a>
-              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">
+                    Albums
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    {% for album in albums %}
+                    <a href="#" class="dropdown-item">{{album.name}} ({{album.year}})</a>
+                    {% endfor %}
+                  </div>
+                </li>
             </ul>
 
 
