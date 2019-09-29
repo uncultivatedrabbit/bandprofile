@@ -3,30 +3,75 @@
 {% load static %}
 {% block title %} ADTR {% endblock %}
 {% block body %}
-  <div class="container">
-    <div class="row justify-content-center">
-      <h1 class="band-members mt-4">BAND MEMBERS</h1>
-    </div>
-    <div class="row">
-      <div class="col-md-6 mt-3 d-flex justify-content-center">
-        <img class="rounded profile" src="{% static 'images/jeremy.jpg' %}"  alt="Jeremy McKinnon">
+
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <h1 class="band-members mt-4">BAND MEMBERS</h1>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-2 mr-4 d-flex justify-content-center">
+      <div class="overlay-container">
+        <a href="{% url 'bio' 'jeremy-mckinnon' %}">
+          <img class="rounded profile" src="{% static 'images/jeremy.jpg' %}"  alt="Jeremy McKinnon">
+          <div class="overlay">
+            <div class="overlay-text">{{ band_members.0.first }} {{ band_members.0.last }}</div>
+          </div>
+        </a>
       </div>
-      <div class="col-md-6 mt-3 d-flex justify-content-center">
-        <img class="rounded" src="{% static 'images/neil.jpg' %}" alt="Neil Westfall">
+    </div>
+    <div class="col-md-2 mr-4 d-flex justify-content-center">
+      <div class="overlay-container">
+        <a href="{% url 'bio' 'neil-westfall' %}">
+          <img class="rounded profile" src="{% static 'images/neil.jpg' %}" alt="Neil Westfall">
+          <div class="overlay">
+            <div class="overlay-text">
+              {{ band_members.1.first }} {{ band_members.2.last }}
+            </div>
+          </div>
+        </a>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-4 mt-3 col-sm-12 d-flex justify-content-center">
+
+    <div class="col-md-2 mr-4 col-sm-12 d-flex justify-content-center">
+      <div class="overlay-container">
+        <a href="{% url 'bio' 'alex-shelnutt' %}">
           <img class="rounded profile " src="{% static 'images/alex.jpg' %}" alt="Alex">
+          <div class="overlay">
+            <div class="overlay-text">
+              {{ band_members.3.first }} {{ band_members.3.last }}
+            </div>
+          </div>
+        </a>
       </div>
-      <div class="col-md-4 mt-3 col-sm-12 d-flex justify-content-center">
+    </div>
+
+    <div class="col-md-2 mr-4 col-sm-12 d-flex justify-content-center">
+      <div class="overlay-container">
+        <a href="{% url 'bio' 'joshua-woodard' %}">
           <img class="rounded profile" src="{% static 'images/joshua.jpg' %}" alt="Joshua">
+          <div class="overlay">
+            <div class="overlay-text">
+              {{ band_members.2.first }} {{ band_members.2.last }}
+            </div>
+          </div>
+        </a>
       </div>
-      <div class="col-md-4 mt-3 col-sm-12  d-flex justify-content-center">
+    </div>
+
+    <div class="col-md-2 col-sm-12  d-flex justify-content-center">
+      <div class="overlay-container">
+        <a href="{% url 'bio' 'kevin-skaff' %}">
           <img class="rounded profile" src="{% static 'images/kevin.jpg' %}" alt="Kevin">
+          <div class="overlay">
+            <div class="overlay-text">
+              {{ band_members.4.first }} {{ band_members.4.last }}
+            </div>
+          </div>
+        </a>
       </div>
     </div>
   </div>
+</div>
 
   <div class="container">
     <div class="row justify-content-center">
@@ -36,29 +81,41 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-mid-4 m-3">
-          <img src="{% static 'images/andtheirnamewastreason.jpg' %}"  alt="And Their Name Was Treason">
+        <a href="/and-their-name-was-treason">
+            <img src="{% static 'images/andtheirnamewastreason.jpg' %}"  alt="And Their Name Was Treason">
+        </a>
           <p>{{ albums.0 }}</p>
       </div>
       <div class="col-mid-4 m-3">
+        <a href="for-those-who-have-heart">
           <img src="{% static 'images/forthosewhohaveheart.jpg' %}"  alt="For Those Who Have Heart">
+        </a>
           <p>{{ albums.1 }}</p>
       </div>
       <div class="col-mid-4 m-3">
+        <a href="homesick">
           <img src="{% static 'images/homesick.jpg' %}"  alt="Homesick">
+        </a>
           <p>{{ albums.2 }}</p>
       </div>
     </div>
     <div class="row justify-content-center">
         <div class="col-mid-4 m-3">
+          <a href="/what-separates-me-from-you">
             <img src="{% static 'images/ADTR_WSMFY.jpg' %}"  alt="WSMFY">
+          </a>
             <p>{{ albums.3 }}</p>
         </div>
         <div class="col-mid-4 m-3">
-            <img src="{% static 'images/commoncourtesy.png' %}"  alt="Common Courtesy">
+          <a href="common-courtesy">
+              <img src="{% static 'images/commoncourtesy.png' %}"  alt="Common Courtesy">
+          </a>
             <p>{{ albums.4 }}</p>
         </div>
         <div class="col-mid-4 m-3">
-            <img src="{% static 'images/badvibrations.jpg' %}"  alt="JAnd Their Name Was Treason">
+          <a href="bad-vibrations">
+              <img src="{% static 'images/badvibrations.jpg' %}"  alt="Bad Vibrations">
+          </a>
             <p>{{ albums.5 }}</p>
         </div>
       </div>

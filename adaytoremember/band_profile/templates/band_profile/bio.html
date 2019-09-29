@@ -1,0 +1,12 @@
+{% extends "band_profile/base.html" %}
+
+{% load static %}
+{% block title %}{{band_member.first}} {{band_member.last}}{% endblock %}
+
+{% block body %}
+
+  <div class="container">
+      {{ band_member}}
+  </div>
+
+{% endblock %}

@@ -4,7 +4,7 @@ body {
   font-family: 'Architects Daughter', cursive;
   background-color: #333;
   color: #eee;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 
@@ -27,7 +27,48 @@ nav{
 }
 
 /* images */
+.overlay-container{
+  position: relative;
+  width: 100%;
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: 120%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #c23616;
+  border-radius: 1%;
+}
+
+.band-profile{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay-container:hover .overlay {
+  opacity: 0.9;
+}
+
+.overlay-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  color: #eee;
+}
+
 img.profile{
   max-width: 352px;
-  height: 550px;
+  width: 120%;
+  height: 100%;
 }
