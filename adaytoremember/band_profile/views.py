@@ -27,13 +27,24 @@ def bio(request, name):
   context = {
     "band_member": BandMember.objects.get(first=first_name),
     "albums": Album.objects.all(),
-    "songs": Song.objects.all()
+    "songs": Song.objects.all(),
+    "band_members": BandMember.objects.all()
   }
 
   return render(request, "band_profile/bio.html", context)
 
-# def jeremymckinnon(request):
-#   return render(request, "band_profile/jeremymckinnon.html")
+def albums(request):
+  context = {
+    "band_members": BandMember.objects.all(),
+    "albums": Album.objects.all(),
+    "songs": Song.objects.all()
+  }
+  return render(request, "band_profile/albums.html", context)
 
-def neilwestfall(request):
-  return render(request, "band_profile/neilwestfall.html")
+def album(request, slug):
+ 
+  context = {
+    "album": Album.objects.get(slug=slug),
+    "albums": Album.objects.all(),
+  }
+  return render(request, "band_profile/album.html", context)

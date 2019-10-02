@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/gif" sizes="16x16">
     <link rel="stylesheet"  type="text/css" href="{% static 'css/style.css' %}">
     <script src="https://kit.fontawesome.com/09e706ee12.js" crossorigin="anonymous"></script>
   </head>
@@ -28,25 +29,20 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   {% for member in band_members %}
-                  <a href="#" class="dropdown-item">{{member.first}} {{member.last}}</a>
+                  <a href="/adtr/{{member.first|lower}}-{{member.last|lower}}" class="dropdown-item">{{member.first}} {{member.last}}</a>
                   {% endfor %}
                 </div>
               </li>
-              <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">
+              <li class="nav-item">
+                  <a class="nav-link role="button" aria-haspopup="true" aria-expanded="false" href="{% url 'albums' %}">
                     Albums
                   </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    {% for album in albums %}
-                    <a href="#" class="dropdown-item">{{album.name}} ({{album.year}})</a>
-                    {% endfor %}
-                  </div>
-                </li>
+              </li>
             </ul>
 
 
           </div>
-          <ul class="nav justify-content-end">
+          <!-- <ul class="nav justify-content-end">
               <li class="nav-item">
                 <a class="nav-link active" href="#">Log In</a>
               </li>
@@ -56,7 +52,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Register</a>
               </li>
-            </ul>
+            </ul> -->
         </nav>
 
 

@@ -25,7 +25,7 @@
           <img class="rounded profile" src="{% static 'images/neil.jpg' %}" alt="Neil Westfall">
           <div class="overlay">
             <div class="overlay-text">
-              {{ band_members.1.first }} {{ band_members.2.last }}
+              {{ band_members.1.first }} {{ band_members.1.last }}
             </div>
           </div>
         </a>
@@ -73,51 +73,5 @@
   </div>
 </div>
 
-  <div class="container">
-    <div class="row justify-content-center">
-      <h1 class="albums mt-4">
-        ALBUMS
-      </h1>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-mid-4 m-3">
-        <a href="/and-their-name-was-treason">
-            <img src="{% static 'images/andtheirnamewastreason.jpg' %}"  alt="And Their Name Was Treason">
-        </a>
-          <p>{{ albums.0 }}</p>
-      </div>
-      <div class="col-mid-4 m-3">
-        <a href="for-those-who-have-heart">
-          <img src="{% static 'images/forthosewhohaveheart.jpg' %}"  alt="For Those Who Have Heart">
-        </a>
-          <p>{{ albums.1 }}</p>
-      </div>
-      <div class="col-mid-4 m-3">
-        <a href="homesick">
-          <img src="{% static 'images/homesick.jpg' %}"  alt="Homesick">
-        </a>
-          <p>{{ albums.2 }}</p>
-      </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-mid-4 m-3">
-          <a href="/what-separates-me-from-you">
-            <img src="{% static 'images/ADTR_WSMFY.jpg' %}"  alt="WSMFY">
-          </a>
-            <p>{{ albums.3 }}</p>
-        </div>
-        <div class="col-mid-4 m-3">
-          <a href="common-courtesy">
-              <img src="{% static 'images/commoncourtesy.png' %}"  alt="Common Courtesy">
-          </a>
-            <p>{{ albums.4 }}</p>
-        </div>
-        <div class="col-mid-4 m-3">
-          <a href="bad-vibrations">
-              <img src="{% static 'images/badvibrations.jpg' %}"  alt="Bad Vibrations">
-          </a>
-            <p>{{ albums.5 }}</p>
-        </div>
-      </div>
-  </div>
+  
 {% endblock %}

@@ -6,7 +6,78 @@
 {% block body %}
 
   <div class="container">
-      {{ band_member}}
+    <div class="media mt-3">
+
+      {% if band_member.first == "jeremy"|capfirst %}
+        <img class="profile rounded mr-2" src="{% static 'images/jeremy.jpg' %}" class="align-self-start mr-3" alt="jeremy mckinnon">
+          <div class="media-body">
+              <h2 class="mt-0">Jeremy Mckinnon</h2>
+              <p>Jeremy McKinnon was born in Ocala, Florida and grew up with two sisters. His parents are originally from Brooklyn, New York and he is of Irish and Italian descent. McKinnon first got a job at Boston Market and later went on to do construction work. McKinnon's interest in music came as a result of hanging out with a friend's band. McKinnon was inspired to write and play heavy music by a local band, Seventh Star.McKinnon often got into trouble during high school in Ocala, Florida and as a result he would write music. McKinnon's first band was the ska band All for Nothing, before joining guitarist Tom Denney and drummer Bobby Scruggs to form A Day to Remember.</p>
+              <p>McKinnon and A Day to Remember bassist Joshua Woodard have formed their own record label, Running Man; in partnership with Epitaph, they signed up band Veara.</p>
+              <p>During an interview in 2012, McKinnon said that the possibility of doing a solo album was unlikely.</p>
+              <p>On December 25, 2016, McKinnon married his long-time girlfriend, Stephanie Morrison. On Father's Day 2017, Stephanie revealed on Instagram that the two were expecting their first child together. On December 5, 2017, McKinnon and his wife announced the arrival of their first child, a daughter - Montana Nash McKinnon.</p>
+              <p>McKinnon follows a straight edge lifestyle.</p>
+            </div>
+
+      {% elif band_member.first == "neil"|capfirst %}
+        <img class="profile rounded mr-2" src="{% static 'images/neil.jpg' %}" class="align-self-start mr-3" alt="neil">
+          <div class="media-body">
+              <h2 class="mt-0">Neil Westfall</h2>
+              <p>The guitarist, Neil Westfall was born on December 25, 1987, in Ocala, Florida, United States of America.
+
+                  Neil was raised up in his hometown Ocala with his family and he has also done his schooling from there.
+                  
+                  Neil was also interested in playing guitar from an early age. During his middle school days and high school days, Neil’s talent reached every corner of the high school. After he showed his brilliant performance in many music groups in Ocala, Florida, Neil joined American rock band, called Day to Remember in the year 2003.
+                  
+                  The 29-years old, Neil Westfall is an unmarried man. However, Neil is in a relationship with Mary Matten. His girlfriend, Mary is a plant-based chef and entrepreneur who set up the brand Nom Yourself.  
+                  
+                  Neil and Mary are dating for a long time as well as they both are also more active on social media. The couple has lots of care for one another and they share a lot of adorable pictures of them together.</p>
+            </div>
+
+        {% elif band_member.first == "kevin"|capfirst %}
+          <img class="profile rounded mr-2" src="{% static 'images/kevin.jpg' %}" class="align-self-start mr-3" alt="kevin">
+             <div class="media-body">
+              <h2 class="mt-0">Kevin Skaff</h2>
+              <p>Kevin Skaff was born on the 8th of June, 1985 in Owatonna, Minnesota and not much is known regarding his family or his past life. He started to play guitars and sang songs as a teenager and formed groups with his school friends to perform in the bars. “It was the trend, it was the age of Rock and as far as we knew; being in a rock band was the best you could do” he said in an interview regarding his intentions.</p>
+
+              <p>However, he did not have a famous musical career until he joined “A Day to Remember”.  Kevin himself did not join the band thought until 2009 and as though he was waiting for an opportunity, he came in after the band’s original guitarist Tom Denney broke his wrist.</p>
+              
+              <p>Kevin Skaff really came to limelight after he was seen with Sarya Jade Bevis, better known as “Paige” from WWE. The two of them started dating around the end of 2014 and were seen in a couple of social events together; including WWE’s Total Divas.
+              
+              
+              It looked like they were deeply in love, especially after the engagement that took place socially when Kevin put a big diamond ring in Paige’s finger. However, all that starts well doesn’t end well or at least in this case.
+              
+              It so happened that Paige mentioned that she is not very good in handling serious relationships and started to get out of this one as well. Upon breaking up with Paige, he is not involved in any relationship. He is single now and currently dedicated and devoted towards his career.</p>
+              
+              
+                
+              <p>Kevin Skaff is one of the most valuable assets in the world of music.  It does not seem like he is into social work, as he has not done much charity until now.  He has never been part of any controversy.  He has set an example for upcoming generations and they can walk in his footsteps to get success. He is the perfect example of what a sportsman should be like. </p>
+            </div>
+
+        {% elif band_member.first == "joshua"|capfirst %}
+          <img class="profile rounded mr-2" src="{% static 'images/joshua.jpg' %}" class="align-self-start mr-3" alt="joshua">
+            <div class="media-body">
+              <h2 class="mt-0">Joshua Woodard</h2>
+              <p>Original member of the metalcore, pop punk band A Day to Remember who formed in Ocala, Florida in 2003.</p>
+
+              <p>He had a friend who put the band in contact with an employee at Victory Records who signed ADTR in 2006 prior to the release of their second album For Those Who Have Heart.</p>
+            </div>
+
+        {% elif band_member.first == "alex"|capfirst %}
+          <img class="profile rounded mr-2" src="{% static 'images/Alex.jpg' %}" class="align-self-start mr-3" alt="alex">
+            <div class="media-body">
+              <h2 class="mt-0">Alex Shelnutt</h2>
+              <p>Alex was only 15 years old when he joined A Day to Remember in 2006. Before he came aboard the band had gone through two drummers and recorded one album And Their Name Was Treason, which sold 8,690 copies. The band signed with Victory records and after signing Alex their career as a group took off. They began recording in Zing Studios shortly after Alex came aboard.</p>
+
+              <p>Their second album, For Those Who Have Hearts was released in January of 2007. Since then they have released two more albums; Homesick (released February 2009) and What Separates Me from You (released October 2010). Along with their album releases they remixed and remastered their first album And their Name Was Treason which was released titled Old Record in October of 2008.
+              Alex taught himself how to play the drums. In an interview with Online Drummer.com he states that “An important skill: focus on being solid. No matter what type of music you play, just try to stay solid”.</p>
+            </div>
+
+
+     
+      {% endif %}
+      
+    </div>
   </div>
 
 {% endblock %}
